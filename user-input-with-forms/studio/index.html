@@ -3,6 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<script>
+		 function setSearchEngine() {
+        console.log("setSearchEngine function called.");
+        // We will add code here later
+    }
 		// TODO: create a handler
     window.addEventListener("load", function(){
         // TODO: register the handler
@@ -14,6 +18,32 @@
 
 	<form id="searchForm">
     <!-- TODO: add form elements -->
+
+		let actions = {
+			"Google":"https://www.google.com/search",
+			"DuckDuckGo":"https://duckduckgo.com/",
+			"Bing": "https://www.bing.com/search",
+			"Ask": "https://www.ask.com/web"
+		};
+
+		<label for="q">Search:</label>
+		<input type="text" id="q" name="q">		
+
+		<label>Choose a search engine:</label><br>
+
+		<input type="radio" id="google" name="engine" value="google" >
+		<label for="google">Google</label><br>
+
+		<input type="radio" id="duckduckgo" name="engine" value="duckDuckGo" >
+		<label for="duckduckgo">DuckDuckGo</label><br>
+
+		<input type="radio" id="bing" name="engine" value="bing" >
+		<label for="bing">Bing</label><br>
+
+		<input type="radio" id="ask" name="engine" value="ask" >
+		<label for="ask">Ask</label><br>
+
+		<input type="submit" value="Go!">
 	</form>
 
 </body>
